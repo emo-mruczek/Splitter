@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>370</y>
+      <w>320</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>Expense
+--
++ uint32_t amount
++ vec&lt;Person&gt; dluznicy
++ Person placacy
++ map&lt;Person, amount&gt; kto_ile_placi
+--
+uint32_t dodajKwote()
+void getKwota()
+void addPerson()
+void getPeople()
+void split()
+void setPayer()
+void getPayer()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1070</x>
+      <y>380</y>
+      <w>430</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>Person
+--
++ std::String name
++ vec&lt;Person&gt; lista_dluznikow
++ vec&lt;Person&gt; lista_osob_z_dlugiem_dla_tej_osoby
+--
+string getName()
+void setName()
+void showExpenses()
+void showKomuJestesDluzny()
+void showKtoCiIleWisi()
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>320</x>
+      <y>370</y>
+      <w>370</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>Note..
+mozliwosc dzielenia kto ile ma zaplacic
+domyslny podzial
+walidacja kwot
+jak dodajesz osobe to wyswietl z osob
+nie mozesz dodac wydatku bez osob
+wyswietlanie, kto ile komu wisi
+splitowanie na konkretne kwoty/procenty
+mozliwosc dawania opisu
+mozliwosc odczytu z pliku
+ograniczyc wielkosc nazw
+bg=black
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>460</x>
+      <y>760</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>showAllExpenses();
+show
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1540</x>
+      <y>380</y>
+      <w>240</w>
+      <h>430</h>
+    </coordinates>
+    <panel_attributes>Sheet
+--
++ Expense expenses
++ Person people
++ string name
++ string about
++ date date???
+--
+void setName()
+void getName()
+void setAbout()
+void getAbout()
+void addPerson()
+void deletePerson()
+void getPeople()
+void addExpense()
+void deleteExpense()
+void getExpenses()
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

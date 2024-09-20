@@ -45,7 +45,7 @@ void Sheet::addExpense() {
         with.push_back(m_people[som]);
         std::cout << "Is that all? (y/N)";
         std::cin >> res;
-    } while ( res != 'y' );
+     } while ( res != 'y' );
 
     m_people[num].addExpense(Expense {name, amount, with});
 }
@@ -56,4 +56,8 @@ void Sheet::showExpenses() const {
         p.showExpenses();
         std::cout << "\n";
     }
+}
+
+void Sheet::calculate() const {
+    
 }

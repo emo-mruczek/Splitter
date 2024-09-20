@@ -2,6 +2,10 @@
 /* its a mess rn plz dont yell at me :<< */
 
 // TODO: validation
+// TODO: tests
+// TODO: folder structure
+// TODO: makefile
+// TODO: formatter
 
 #include "includes.h"
 
@@ -66,8 +70,9 @@ int main() {
 void showOptions(Sheet& sheet, char res) {
 
     // TODO: firstly, show only a possibility to add a person
+    // TODO: deleting stuff, maybe different menu for expenses, people etc.
 
-    if ( res == 'y' ) std::cout << "1. Add a person\n2. Add an expense\n3. Show people\n4. Show expenses\n5. Save\n6. Exit\n";
+    if ( res == 'y' ) std::cout << "1. Add a person\n2. Add an expense\n3. Show people\n4. Show expenses\n5. Calculate\n6. Save\n7. Exit\n";
 
     char command;
     std::cin >> command;
@@ -90,10 +95,14 @@ void showOptions(Sheet& sheet, char res) {
             break;
         }
         case '5': {
-            save();
+            sheet.calculate();
             break;
         }
         case '6': {
+            save();
+            break;
+        }
+        case '7': {
             exitProgram();
         }
         default: {

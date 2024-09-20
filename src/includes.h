@@ -55,6 +55,8 @@ public:
 
     void showExpenses() const; 
 
+    void calculate() const;
+
     void setName(std::string_view name) {
         m_name = name;
     }

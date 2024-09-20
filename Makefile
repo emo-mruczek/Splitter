@@ -1,21 +1,16 @@
-all: main expense person sheet link
-	
-main: 
-	g++ -Wall -Werror -c main.cpp -o main.o
+objects = sheet.o person.o expense.o main.o
+CXX = g++
+SRC_DIR = src
+CXXFLAGS = -Wall -Werror  
 
-expense:
-	g++ -Wall -Werror -c Expense.cpp -o expense.o
+all: main
 
-person:
-	g++ -Wall -Werror -c Person.cpp -o person.o
+main: $(objects)
+	$(CXX) $(objects) -o main
 
-sheet:
-	g++ -Wall -Werror -c Sheet.cpp -o sheet.o
-
-link:
-	g++ *.o -o main
+%.o: $(SRC_DIR)/%.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm *o main
-
+	rm -f *.o main
 
